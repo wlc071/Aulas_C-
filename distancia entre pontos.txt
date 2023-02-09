@@ -1,0 +1,28 @@
+static void Main(string[] args)
+        {
+            Console.WriteLine("\t\t <<<< DISTÂNCIA ENTRE DOIS PONTOS >>>>");
+            Console.WriteLine("");
+            Console.WriteLine("- Informe a posição dos dois pontos cartesianos.");
+            Console.WriteLine("");
+
+            Console.Write("X1 = "); //Valor do X no primeiro ponto.
+            double x1 = double.Parse(Console.ReadLine());
+
+            Console.Write("Y1 = "); //Valor do Y no primeiro ponto.
+            double y1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("");
+
+            Console.Write("X2 = "); //Valor do X no segundo ponto.
+            double x2 = double.Parse(Console.ReadLine());
+
+            Console.Write("Y2 = "); //Valor do Y no segundo ponto.
+            double y2 = double.Parse(Console.ReadLine());
+
+            double oper_1 = Math.Pow((x1 - x2), 2); //Função Math.Pow para calculo com expoente.
+            double oper_2 = Math.Pow((y1 - y2), 2);
+            double distancia = Math.Sqrt(oper_1 + oper_2); //Função Math.Sqrt para calcular raiz.
+            Console.WriteLine("");
+
+            Console.WriteLine("A distância entre os pontos é " + distancia);
+            Console.ReadKey();
+        }

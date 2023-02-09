@@ -1,0 +1,38 @@
+static void Main(string[] args)
+        {
+            double result = 0, num = 0;
+            int opc = 0;
+
+            while (opc != 2)
+            {
+                Console.WriteLine("\t-########## CALCULAR RAIZ QUADRADA ##########-");
+                Console.WriteLine("==================================================================");
+                Console.WriteLine("-> Digite um número positivo maior ou igual a zero.");
+                Console.WriteLine("-> Para iniciar digite 1, ou 2 para sair.");
+                Console.WriteLine("==================================================================");
+                Console.WriteLine("   1 = Iniciar cálculo.\n   2 = Sair.");
+                Console.Write("   Opç: ");
+                opc = int.Parse(Console.ReadLine());
+
+                while ((opc < 1) || (opc > 2))
+                {
+                    Console.Write("-- Opção inválida. Corrija: ");
+                    opc = int.Parse(Console.ReadLine());
+                }
+
+                if (opc == 2)
+                {
+                    Console.WriteLine("\nFinalizando...");
+                }
+                else
+                {
+                    Console.Write("\n> Número: ");
+                    num = double.Parse(Console.ReadLine());
+                    result = Math.Sqrt(num);
+                    Console.WriteLine("\nSua raiz quadrada é: " + result + "\n\n\n\t     [Pressione ENTER para continuar]");
+                }
+
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }

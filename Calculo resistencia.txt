@@ -1,0 +1,46 @@
+int opc = 0;
+            double r1 = 0, r2 = 0, req = 0;
+
+            while (opc != 2)
+            {
+                Console.WriteLine("\t\t <<<< RESISTÊNCIA EQUIVALENTE ENTRE DOIS RESISTORES >>>>");
+                Console.WriteLine("");
+                Console.WriteLine("-> Informe os valores dos resistores.");
+                Console.WriteLine("-> [1] Para iniciar / [2] Para finalizar.");
+                int opc = int.Parse(Console.ReadLine());
+                while ((opc < 1) || (opc > 2))
+                {
+                    Console.Write("Inválido. Corrija: ");
+                    opc = int.Parse(Console.ReadLine());
+                }
+                if (opc == 2)
+                {
+                    Console.WriteLine("Finalizando...");
+                }
+                else
+                {
+                    Console.Write("Resistor R1: ");
+                    r1 = double.Parse(Console.ReadLine());
+                    while (r1 < 0)
+                    {
+                        Console.Write("Valor negativo inválido. Corrija:");
+                        r1 = double.Parse(Console.ReadLine());
+                    }
+
+                    Console.Write("Resistor R2: ");
+                    r2 = double.Parse(Console.ReadLine());
+                    while (r2 < 0)
+                    {
+                        Console.Write("Valor negativo inválido. Corrija:");
+                        r2 = double.Parse(Console.ReadLine());
+                    }
+
+                    req = (r1 * r2) / (r1 + r2);
+                    Console.WriteLine("");
+                    Console.WriteLine("Resistência equivalente = " + req);
+                }
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+        }

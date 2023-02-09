@@ -1,0 +1,88 @@
+static void Main(string[] args)
+        {
+            Console.WriteLine("\t\t <<< INDICE DE MASSA CORPORAL (IMC) >>>");
+            Console.WriteLine("");
+            Console.WriteLine("-> Entre com os dados pedidos.");
+
+            Console.Write("Nome: ");
+            string nome = Console.ReadLine();
+
+            Console.Write("Sexo - (m) Masculino / (f) Feminino : ");
+            string sexo = Console.ReadLine();
+            while ((sexo != "m") && (sexo != "f")){
+                Console.Write("Opção inválida. Corrija: ");
+                sexo = Console.ReadLine();
+            }
+
+            Console.Write("Peso (kg): ");
+            float peso = float.Parse(Console.ReadLine());
+
+            Console.Write("Altura (m): ");
+            float altura = float.Parse(Console.ReadLine());
+
+            Console.Write("Data de nascimento (DD/MM/AAAA): ");
+            string nascimento = Console.ReadLine();
+            DateTime dataNasc = Convert.ToDateTime(nascimento); // DateTime tipo de variavel para data, usando convert
+            int anos = DateTime.Now.Year - dataNasc.Year;
+
+            while (anos < 0)        // Validar a idade, caso seja digitado um ano maior que o atual
+            {
+                Console.Write("Data inválida. Corrija: ");
+                nascimento = Console.ReadLine();
+                dataNasc = Convert.ToDateTime(nascimento);
+                anos = DateTime.Now.Year - dataNasc.Year;
+            }
+
+            int mes = DateTime.Now.Month - dataNasc.Month; // Verificar se a pessoa fez aniversario esse ano usando o mês
+            int dia = DateTime.Now.Day - dataNasc.Day;      // Verificar se fez aniversario esse mês usando o dia
+
+            if (mes < 0) 
+            {
+                anos = anos - 1;
+            }
+            else if (dia < 0)
+            {
+                anos = anos - 1;
+            }
+
+            Console.WriteLine("- Resultado:\nIdade: " + anos +" anos");
+
+            double imc = peso /(altura * altura);
+            imc = Math.Round( imc, 2);
+            Console.WriteLine("Imc: " + imc);
+
+            if (imc < 17)
+            {
+                Console.WriteLine("Está muito abaixo do peso ideal.");
+                Console.ReadKey();
+            }
+            else if ((imc >= 17) && (imc <=18.49)) {
+                Console.WriteLine("Está abaixo do peso ideal.");
+                Console.ReadKey();
+            }
+            else if ((imc >= 18.5) && (imc <= 24.99))
+            {
+                Console.WriteLine("Está com peso normal.");
+                Console.ReadKey();
+            }
+            else if ((imc >= 25) && (imc <= 29.99))
+            {
+                Console.WriteLine("Está acima do peso.");
+                Console.ReadKey();
+            }
+            else if ((imc >= 30) && (imc <= 34.99))
+            {
+                Console.WriteLine("Obesidade I.");
+                Console.ReadKey();
+            }
+            else if ((imc >= 35) && (imc <= 39.99))
+            {
+                Console.WriteLine("Obesidade II (Severa).");
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("Obesidade III (Mórbida).");
+                Console.ReadKey();
+            }
+        }

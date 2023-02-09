@@ -1,0 +1,49 @@
+static void Main(string[] args)
+        {
+            int i = 0, opc = 0;
+            double valor = 0;
+            while (opc != 2)
+            {
+                Console.WriteLine("================ CALCULAR FATORIAL ===================");
+                Console.WriteLine("- Obs: [1] Iniciar cálculo / [2] Sair.");
+                Console.WriteLine("       Informe apenas números inteiros.");
+                Console.WriteLine("       Não existe fatorial para números negativos.");
+                Console.WriteLine("\n========================================================");
+                Console.Write(" -> [1 ou 2]: ");
+                opc = int.Parse(Console.ReadLine());
+                while ((opc < 1) || (opc > 2))
+                {
+                    Console.Write("Opção inválida. Corrija: ");
+                    opc = int.Parse(Console.ReadLine());
+                }
+                if (opc == 2)
+                {
+                    Console.WriteLine("\nFinalizando...");
+                }
+                else
+                {
+                    Console.Write("\nFatorial do número: ");
+                    int fat = int.Parse(Console.ReadLine());
+                    while (fat < 0)
+                    {
+                        Console.Write("Número inválido. Corrija: ");
+                        fat = int.Parse(Console.ReadLine());
+                    }
+                    if (fat == 0)
+                    {
+                        Console.WriteLine("\n> RESULTADO: 1");
+                    }
+                    else
+                    {
+                        valor = fat;
+                        for (i = (fat - 1); i >= 1; i--)
+                        {
+                            valor = (valor * i);
+                        }
+                        Console.WriteLine("\n> RESULTADO: " + valor);
+                    }
+                }
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }

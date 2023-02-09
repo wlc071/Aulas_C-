@@ -1,0 +1,58 @@
+static void Main(string[] args)
+        {
+            int opc = 0;
+
+            while (opc != 2)
+            {
+                Console.WriteLine("-----<<<< POTENCIA ENTRE DOIS VALORES >>>>-----");
+                Console.WriteLine("> Calcular informando a base e o expoente.");
+                Console.WriteLine("> Informe os valores ou escolha sair.");
+                Console.WriteLine("=========================================================================");
+                Console.WriteLine("   1 = Iniciar cálculo.");
+                Console.WriteLine("   2 = Sair.");
+                Console.Write("   Escolha: ");
+                opc = int.Parse(Console.ReadLine());
+                while ((opc < 1) || (opc > 2))
+                {
+                    Console.Write("--- Opção inválida. Corrija: ");
+                    opc = int.Parse(Console.ReadLine());
+                    
+                }
+                if (opc == 2)
+                {
+                    Console.WriteLine("--------------------------------------------------------------------");
+                    Console.WriteLine("** Finalizando programa...");
+                }
+                else
+                {
+                    Console.WriteLine("=============================================================");
+                    Console.Write("Base: ");
+                    double bas = double.Parse(Console.ReadLine());
+                    Console.Write("Expoente positivo: ");
+                    int exp = int.Parse(Console.ReadLine());
+                    while (exp < 0)
+                    {
+                        Console.Write("Expoente inválido. Corrija: ");
+                        exp = int.Parse(Console.ReadLine());
+                    }
+                    int i = 0;
+                    double result = 0;
+                    if (exp == 0)
+                    {
+                        result = bas;
+                    }
+                    else
+                    {
+                        result = 1;
+                        for (i = 1; i <= exp; i++)
+                        {
+                            result = result * bas;
+                        }
+                    }
+                    
+                    Console.WriteLine("\n->> Resultado: " + result +"            [Pressione ENTER para próximo cálculo]");
+                }
+                Console.ReadKey();
+                Console.Clear();
+            }    
+        }

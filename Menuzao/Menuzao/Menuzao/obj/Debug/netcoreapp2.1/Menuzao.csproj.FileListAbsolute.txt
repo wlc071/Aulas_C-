@@ -1,0 +1,11 @@
+C:\Users\WG\source\repos\Menuzao\Menuzao\bin\Debug\netcoreapp2.1\Menuzao.deps.json
+C:\Users\WG\source\repos\Menuzao\Menuzao\bin\Debug\netcoreapp2.1\Menuzao.runtimeconfig.json
+C:\Users\WG\source\repos\Menuzao\Menuzao\bin\Debug\netcoreapp2.1\Menuzao.runtimeconfig.dev.json
+C:\Users\WG\source\repos\Menuzao\Menuzao\bin\Debug\netcoreapp2.1\Menuzao.dll
+C:\Users\WG\source\repos\Menuzao\Menuzao\bin\Debug\netcoreapp2.1\Menuzao.pdb
+C:\Users\WG\source\repos\Menuzao\Menuzao\obj\Debug\netcoreapp2.1\Menuzao.csprojAssemblyReference.cache
+C:\Users\WG\source\repos\Menuzao\Menuzao\obj\Debug\netcoreapp2.1\Menuzao.csproj.CoreCompileInputs.cache
+C:\Users\WG\source\repos\Menuzao\Menuzao\obj\Debug\netcoreapp2.1\Menuzao.AssemblyInfoInputs.cache
+C:\Users\WG\source\repos\Menuzao\Menuzao\obj\Debug\netcoreapp2.1\Menuzao.AssemblyInfo.cs
+C:\Users\WG\source\repos\Menuzao\Menuzao\obj\Debug\netcoreapp2.1\Menuzao.dll
+C:\Users\WG\source\repos\Menuzao\Menuzao\obj\Debug\netcoreapp2.1\Menuzao.pdb
